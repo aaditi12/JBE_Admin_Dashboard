@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Tracker Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+  <nav>
+    <h1>Attendance Tracker</h1>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Attendance List</a></li>
+    </ul>
+  </nav>
+  <main>
+    <header>
+      <h2>Admin Dashboard</h2>
+      <input type="text" id="search-input" placeholder="Search...">
+    </header>
+  
+    <h3>Task List</h3>
+    <form id="new-task-form">
+      <input type="text" id="task-name" placeholder="Task Name" required>
+      <input type="text" id="assigned-to" placeholder="Assigned To" required>
+      <input type="date" id="start-date" required>
+      <input type="date" id="due-date" required>
+      <select id="priority" required>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+    <h4>Employee list</h4>
+    <form id="new-employee-form">
+      <input type="text" id="Employee ID" placeholder="Employee ID" required>
+      <input type="text" id="Name	" placeholder="Name	" required>
+      <input type="date" id="Date" required>
+      <input type="text" id="Status" required>
+      
+      <button type="submit">Add Employeedetails</button>
+    </form>
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th data-column="id" data-order="desc">Task ID</th>
+          <th data-column="name" data-order="desc">Task Name</th>
+          <th data-column="assignedTo" data-order="desc">Assigned To</th>
+          <th data-column="startDate" data-order="desc">Start Date</th>
+          <th data-column="dueDate" data-order="desc">Due Date</th>
+          <th data-column="priority" data-order="desc">Priority</th>
+          <th data-column="status" data-order="desc">Status</th>
+          <th data-column="notes" data-order="desc">Notes</th>
+        </tr>
+      </thead>
+      <tbody id="task-table-body">
+        <!-- Dynamic content for task table -->
+      </tbody>
+    </table>
+  
+    <h3>Attendance Tracker</h3>
+    <table class="attendance-table">
+      <thead>
+        <tr>
+          <th data-column="id" data-order="desc">Employee ID</th>
+          <th data-column="name" data-order="desc">Name</th>
+          <th data-column="date" data-order="desc">Date</th>
+          <th data-column="status" data-order="desc">Status</th>
+        </tr>
+      </thead>
+      <tbody id="attendance-table-body">
+        <!-- Dynamic content for attendance table -->
+      </tbody>
+    </table>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
